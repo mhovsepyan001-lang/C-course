@@ -10,9 +10,7 @@ int main(){
 	char *p = alph;
 	printf("The alphabet is:  ");
 	while(*p != '\0'){
-		putchar(*p );
-		putchar(' ');       
-		//exactly the same as printf("%c", *p) but faster//
+		printf("%c", *p);
 		p++;
 	}
 
