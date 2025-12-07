@@ -1,1 +1,18 @@
+CC = gcc
+CFLAGS_DEBUG = -g -Wall -std=c11
+CFLAGS_OPT = -O2 -Wall -std=c11
+TARGET = sort_array
+
+all: debug
+
+debug: $(TARGET)
+
+optimized: CFLAGS = $(CFLAGS_OPT)
+optimized: $(TARGET)
+
+$(TARGET): sort_array.c
+	$(CC) $(CFLAGS) -o $(TARGET) sort_array.c
+
+clean:
+	rm -f $(TARGET) *.o
 
